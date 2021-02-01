@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  jupyter:
+    image: jupyter/datascience-notebook
+    ports:
+      - "8888:8888"
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    # 最後にjupyterLabに接続するためのコマンドを実行する。
+    command: start-notebook.sh --NotebookApp.token=''
